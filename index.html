@@ -1,92 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grand Jester Porto</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            overflow-x: hidden;
-            background: #121212;
-            color: white;
-        }
-        .parallax {
-            position: relative;
-            height: 100vh;
-            background: url('https://www.chromethemer.com/download/hd-wallpapers/deep-space-2560x1440.jpg') no-repeat center;
-            background-size: cover;
-            background-attachment: fixed;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        h1 {
-            font-size: 4rem;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        }
-        .content {
-            text-align: center;
-            padding: 80px 20px;
-            background: #1e1e1e;
-        }
-        .section {
-            height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            transition: transform 0.3s;
-        }
-        .section:hover {
-            transform: scale(1.05);
-        }
-        .section:nth-child(odd) {
-            background: #333;
-        }
-        .section:nth-child(even) {
-            background: #444;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            font-size: 1.2rem;
-            color: white;
-            background: #e91e63;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #c2185b;
-        }
-    </style>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Test 01</title>
 </head>
 <body>
-    <div class="parallax">
-        <h1>Welcome To My Universe</h1>
+    <!-- Swiper -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1566679056462-2075774c8c07?q=80&w=2675&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1494806812796-244fe51b774d?q=80&w=2667&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1670414701148-16ac8873a150?q=80&w=2648&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1590041794748-2d8eb73a571c?q=80&w=2856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=2748&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1443632864897-14973fa006cf?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1446488547543-78c11468449a?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1463693396721-8ca0cfa2b3b5?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+        </div>
+        <div class="swiper-button swiper-button-next"></div>
+        <div class="swiper-button swiper-button-prev"></div>
     </div>
-    <div class="content">
-        <p>Scroll Down to See My Universe</p>
-        <button class="btn" onclick="alert('Welcome to the future!')">Click Me</button>
-    </div>
-    <div class="section">Discover</div>
-    <div class="section">Imagine</div>
-    <div class="section">Create</div>
-    <script>
-        window.addEventListener('scroll', function() {
-            let parallax = document.querySelector('.parallax');
-            let scrollPosition = window.scrollY;
-            parallax.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
-        });
-    </script>
 </body>
 </html>
