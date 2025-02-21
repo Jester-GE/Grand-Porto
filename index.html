@@ -123,6 +123,45 @@
             font-size: 1.5rem;
             color: #333;
         }
+          /* Footer */
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 80px 0 40px;
+        }
+
+        .footer .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer .footer-content p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+
+        .footer .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .footer .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer .social-icons a:hover {
+            color: #ffcc00;
+        }
     </style>
 </head>
 <body>
@@ -166,14 +205,19 @@
         Explore the Universe
     </div>
       <!-- Footer Section -->
-    <div class="footer">
+  <div class="footer">
         <div class="footer-content">
             <p>&copy; 2025 My Website | All Rights Reserved</p>
-            <p>Contact: banjar.gilang@gmail.com</p>
-            <p>Contact: +62 818 0458 0168 </p>
-            <p>Sponsored by: StarXCorp</p>
+            <p>Contact: info@mywebsite.com</p>
+            <p>Sponsored by: XYZ Corp</p>
             <p>Address: 123 Main Street, City, Country</p>
+            <div class="social-icons">
+                <a href="#">📘</a>
+                <a href="#">🐦</a>
+                <a href="#">📸</a>
+            </div>
         </div>
+    </div>
 
     <script>
         let slideIndex = 0;
