@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Scrolling</title>
+    <title>Cool Parallax Website</title>
     <style>
         * {
             margin: 0;
@@ -11,29 +11,30 @@
             box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
+            background: #121212;
+            color: white;
         }
         .parallax {
             position: relative;
             height: 100vh;
-            background: url('https://images.wallpapersden.com/image/download/cool-4k-pattern_bGduZWyUmZqaraWkpJRobWllrWdma2U.jpg') no-repeat center;
+            background: url('https://source.unsplash.com/1600x900/?galaxy,space') no-repeat center;
             background-size: cover;
             background-attachment: fixed;
-        }
-        .content {
-            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 100px 20px;
-            background: white;
         }
         h1 {
-            font-size: 3rem;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .content {
+            text-align: center;
+            padding: 80px 20px;
+            background: #1e1e1e;
         }
         .section {
             height: 50vh;
@@ -41,26 +42,45 @@
             align-items: center;
             justify-content: center;
             font-size: 2rem;
-            color: white;
+            transition: transform 0.3s;
+        }
+        .section:hover {
+            transform: scale(1.05);
         }
         .section:nth-child(odd) {
             background: #333;
         }
         .section:nth-child(even) {
-            background: #555;
+            background: #444;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: white;
+            background: #e91e63;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #c2185b;
         }
     </style>
 </head>
 <body>
     <div class="parallax">
-        <h1>Welcome to Parallax Scrolling</h1>
+        <h1>Explore the Universe</h1>
     </div>
     <div class="content">
-        <p>Scroll down to see the effect!</p>
+        <p>Scroll down to discover something amazing!</p>
+        <button class="btn" onclick="alert('Welcome to the future!')">Click Me</button>
     </div>
-    <div class="section">Section 1</div>
-    <div class="section">Section 2</div>
-    <div class="section">Section 3</div>
+    <div class="section">Discover</div>
+    <div class="section">Imagine</div>
+    <div class="section">Create</div>
     <script>
         window.addEventListener('scroll', function() {
             let parallax = document.querySelector('.parallax');
