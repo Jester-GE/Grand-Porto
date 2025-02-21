@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grand Porto</title>
+    <title>Parallax & Carousel</title>
     <style>
         /* Reset */
         * {
@@ -11,6 +11,52 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Menu */
+        .menu {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            z-index: 1000;
+        }
+
+        .menu .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .menu .hamburger {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            padding: 10px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .nav-links.active {
+            display: flex;
         }
 
         /* Parallax Section */
@@ -24,7 +70,7 @@
             color: white;
             font-size: 3rem;
             font-weight: bold;
-            text-shadow: 2px 2px 10px rgba(23, 23, 23, 0.7);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
             background-attachment: fixed;
         }
 
@@ -35,7 +81,7 @@
             margin: 50px auto;
             overflow: hidden;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(23, 23, 23, 0.3);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .carousel {
@@ -54,7 +100,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background-color: rgba(23, 23, 23, 0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             color: white;
             border: none;
             padding: 10px 15px;
@@ -67,7 +113,7 @@
         .next { right: 10px; }
 
         .prev:hover, .next:hover {
-            background-color: rgba(23, 23, 23, 0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         /* Content Section */
@@ -75,14 +121,26 @@
             text-align: center;
             padding: 50px;
             font-size: 1.5rem;
-            color: #000;
+            color: #333;
         }
     </style>
 </head>
 <body>
 
+    <!-- Navigation Menu -->
+    <div class="menu">
+        <div class="logo">My Website</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="nav-links" id="navLinks">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
     <!-- Parallax Section -->
-    <div class="parallax">Welcome to My Universe</div>
+    <div class="parallax">Welcome to My Website</div>
 
     <!-- Carousel Section -->
     <div class="carousel-container">
@@ -96,14 +154,6 @@
         </div>
         <button class="prev" onclick="moveSlide(-1)">❮</button>
         <button class="next" onclick="moveSlide(1)">❯</button>
-        <style>
-            .content {
-            text-align: center;
-            padding: 50px;
-            font-size: 1.5rem;
-            color: #000;
-        }
-        </style>
     </div>
 
     <!-- Content Section -->
@@ -112,7 +162,7 @@
     </div>
 
     <!-- Another Parallax Section -->
-    <div class="parallax" style="background-image: url('https://www.chromethemer.com/download/hd-wallpapers/galaxy-2560x1440.jpg');">
+    <div class="parallax" style="background-image: url('https://source.unsplash.com/1600x900/?stars,galaxy');">
         Explore the Universe
     </div>
 
@@ -137,7 +187,10 @@
         setInterval(() => {
             moveSlide(1);
         }, 3000);
-    </script>
 
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
