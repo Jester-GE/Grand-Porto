@@ -1,62 +1,91 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f9f4f2;
+    @layer reset, base, swiper;
+
+    @import url('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css') layer(base);
+
+    @layer swiper {
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .swiper-slide {
+            scale: 1.25;
+            transition: scale 250ms ease-in-out;
+            &.swiper-slide-active
+
+{
+    scale: 2;
+    z-index: 10;
 }
 
-.header {
-    background: #8b3f3f;
+&.swiper-slide-prev,
+&.swiper-slide-next {
+    scale: 1.7;
+    z-index: 5;
+    transition-duration: 150ms;
+}
+
+    &.swiper-slide-next + & {
+        z-index: 2;
+    }
+
+}
+
+.swiper-slide img {
+    display: block;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
+
+.swiper-button {
+    --position: 17%;
+    background-color: #F04E23;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0.5rem;
+    &.swiper-button-prev
+
+{
+    left: var(--position);
+}
+
+&.swiper-button-next {
+    right: var(--position);
+}
+
+&:hover {
+    background-color: #4A261F;
+}
+
+&::after {
+    font-size: 1.5rem;
     color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
 }
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
+}
 }
 
-.hero-text {
-    width: 50%;
-    padding: 20px;
-}
+@layer reset {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-.hero img {
-    width: 40%;
-    border-radius: 10px;
+    body {
+        display: grid;
+        place-items: center;
+        min-height: 100svh;
+        background: #eee;
+    }
 }
-
-.search-box {
-    margin-top: 20px;
-}
-
-.search-box input {
-    padding: 10px;
-    width: 60%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-box button {
-    padding: 10px;
-    background: #8b3f3f;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-.stats, .awards, .testimonial {
-    text-align: center;
-    padding: 50px;
-}
-
-.footer {
-    background: #8b3f3f;
-    color: white;
-    text-align: center;
-    padding: 20px;
 }
